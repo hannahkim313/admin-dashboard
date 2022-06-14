@@ -24,3 +24,11 @@ by [Bootstrap](https://themes.getbootstrap.com/)
 
 * [Design Five](https://dribbble.com/shots/4518513-Freebie-Dashboard-Design) by
 [Subash Chandra](https://dribbble.com/subash_chandra) on Dribbble
+
+Icons provided by the following source:
+
+* [Icon pack](https://www.flaticon.com/packs/nature-and-animals-3?word=animal) by [Freepik](https://www.flaticon.com/authors/freepik) on Flaticon
+
+Line graph created by the following website:
+
+* https://www.rapidtables.com/tools/line-graph.html
