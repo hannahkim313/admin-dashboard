@@ -1,0 +1,103 @@
+/* 
+Color reference:
+
+    Pink
+    #F27281
+
+    Blue
+    #ABDFEB
+
+    Yellow
+    #F7D88B
+
+    Orange
+    #E6BD80
+
+    Brown
+    #BF937D
+
+    White
+    #EAEBEB
+
+    Black
+    #454C59
+*/
+
+li {
+    list-style: none;
+}
+
+img[src$="png"] {
+    width: 60px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 24fr;
+}
+
+/* ========================================================================== */
+/* Selectors for the header start here.
+/* ========================================================================== */
+
+.header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+/* ========================================================================== */
+/* Selectors for the sidebar start here.
+/* ========================================================================== */
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+
+    border-right: 1px solid #d7d7d7;
+}
+
+/* ========================================================================== */
+/* Selectors for the main body of the page start here.
+/* ========================================================================== */
+
+.main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    background-color: #f3f3f3;
+}
+
+/* Selectors for the pie chart start here. */
+
+.pie {
+    width: 300px;
+    height: 300px;
+
+    background-image: conic-gradient(
+        #F27281 70deg, 
+        #ABDFEB 0 235deg, 
+        #F7D88B 0
+    );
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    width: 150px;
+    height: 150px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
