@@ -17,7 +17,7 @@ html, body {
 }
 
 body {
-    /* font-family: ; */
+    font-family: "Rubik", "Fira Sans", "Mukta", sans-serif;
     line-height: 1.5;
 
     -webkit-font-smoothing: antialiased;

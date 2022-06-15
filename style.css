@@ -31,6 +31,26 @@ img[src$="png"] {
     width: 60px;
 }
 
+.bird, .chicken, .bee, .bear {
+    border-radius: 50%;
+}
+
+.bird {
+    background-color: #f1d6df;
+}
+
+.chicken {
+    background-color: #eac8bc;
+}
+
+.bee {
+    background-color: #f0e8d1;
+}
+
+.bear {
+    background-color: #e7c8c0;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -50,6 +70,57 @@ img[src$="png"] {
     grid-template-rows: 1fr;
 }
 
+.header img[src$="png"] {
+    padding: 12px;
+}
+
+/* Selectors for the left side of the header start here. */
+
+.header .left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    
+    margin-left: 16px;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+
+.header .left img[src$="svg"] {
+    width: 35px;
+}
+
+/* Selectors for the right side of the header start here. */
+
+.header .right {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    
+    margin-right: 16px;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.header .search,
+.header .alerts,
+.header .profile {
+    display: flex;
+    gap: 8px;
+}
+
+.header .right input {
+    padding-left: 8px;
+    
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 30px;
+}
+
 /* ========================================================================== */
 /* Selectors for the sidebar start here.
 /* ========================================================================== */
@@ -57,8 +128,8 @@ img[src$="png"] {
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-
-    border-right: 1px solid #d7d7d7;
+    
+    border-right: 1px solid #d3d3d3;
 }
 
 /* ========================================================================== */
@@ -69,7 +140,7 @@ img[src$="png"] {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 
-    background-color: #f3f3f3;
+    background-color: #f1f1f1;
 }
 
 /* Selectors for the pie chart start here. */
