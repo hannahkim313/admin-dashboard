@@ -27,6 +27,10 @@ li {
     list-style: none;
 }
 
+button {
+    padding: 4px 8px;
+}
+
 button:hover {
     cursor: pointer;
 }
@@ -70,12 +74,16 @@ img[src$="png"] {
 /* ========================================================================== */
 
 .header {
+    padding: 8px 0;
+
+    border-bottom: 1px solid #d3d3d3;
+
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header img[src$="png"] {
@@ -85,10 +93,7 @@ img[src$="png"] {
 /* Selectors for the left side of the header start here. */
 
 .header .left {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    
-    margin-left: 16px;
+    padding-left: 16px;
     
     display: flex;
     justify-content: flex-start;
@@ -103,10 +108,7 @@ img[src$="png"] {
 /* Selectors for the right side of the header start here. */
 
 .header .right {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    
-    margin-right: 16px;
+    padding-right: 16px;
     
     display: flex;
     justify-content: flex-end;
@@ -126,7 +128,7 @@ img[src$="png"] {
     
     background-color: #f1f1f1;
     border: none;
-    border-radius: 30px;
+    border-radius: 32px;
 }
 
 /* ========================================================================== */
@@ -148,13 +150,15 @@ img[src$="png"] {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 
-    background-color: #f1f1f1;
+    background-color: #f6f6f6;
 }
 
 /* Selectors for the heading start here. */
 
 .heading {
-    margin-top: 16px;
+    padding: 16px;
+
+    border-bottom: 1px solid #d3d3d3;
 
     display: flex;
     justify-content: space-between;
@@ -166,7 +170,7 @@ img[src$="png"] {
 .heading .left {
     font-size: 1.5rem;
 
-    margin-left: 16px;
+    padding-left: 16px;
 
     display: flex;
     align-items: center;
@@ -180,10 +184,10 @@ img[src$="png"] {
 /* Selectors for the right side of the heading start here. */
 
 .heading .right {
-    margin-right: 16px;
+    padding-right: 16px;
 
     display: flex;
-    gap: 8px;
+    gap: 16px;
 }
 
 .heading button {
@@ -191,7 +195,7 @@ img[src$="png"] {
 
     background-color: #ffffff;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 2px 2px 5px #dbdbdb, -2px 2px 5px #dbdbdb;
 
     display: flex;
@@ -200,6 +204,47 @@ img[src$="png"] {
 
 .heading button:hover {
     background-color: #dbdbdb;
+}
+
+/* Selectors for the "Your Projects" section start here. */
+
+.your-projects {
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.projects {
+    display: flex;
+    gap: 32px;
+}
+
+.project {
+    padding: 16px;
+
+    background-color: white;
+    border-left: 8px solid #F7D88B;
+    border-radius: 12px;
+    box-shadow: 2px 3px 5px #dbdbdb, -2px 3px 5px #dbdbdb;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project .content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project .content .icons {
+    align-self: flex-end;
+
+    display: flex;
+    gap: 8px;
 }
 
 /* Selectors for the pie chart start here. */
