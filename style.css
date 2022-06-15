@@ -27,6 +27,14 @@ li {
     list-style: none;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
 img[src$="png"] {
     width: 60px;
 }
@@ -48,7 +56,7 @@ img[src$="png"] {
 }
 
 .bear {
-    background-color: #e7c8c0;
+    background-color: #f6e9da;
 }
 
 .container {
@@ -141,6 +149,57 @@ img[src$="png"] {
     grid-row: 2 / 3;
 
     background-color: #f1f1f1;
+}
+
+/* Selectors for the heading start here. */
+
+.heading {
+    margin-top: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Selectors for the left side of the heading start here. */
+
+.heading .left {
+    font-size: 1.5rem;
+
+    margin-left: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.heading img[src$="png"] {
+    width: 75px;
+}
+
+/* Selectors for the right side of the heading start here. */
+
+.heading .right {
+    margin-right: 16px;
+
+    display: flex;
+    gap: 8px;
+}
+
+.heading button {
+    padding: 4px 8px;
+
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #dbdbdb, -2px 2px 5px #dbdbdb;
+
+    display: flex;
+    gap: 4px;
+}
+
+.heading button:hover {
+    background-color: #dbdbdb;
 }
 
 /* Selectors for the pie chart start here. */
