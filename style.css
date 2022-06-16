@@ -315,3 +315,208 @@ img[src*="leaf"] {
     display: flex;
     gap: 8px;
 }
+
+/* Selectors for the content after the "Your Projects" section start here. */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: 1fr auto;
+}
+
+/* Selectors for the "Data" section start here. */
+
+.data {
+    padding: 0 0 16px 16px;
+
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.data .graph {
+    width: 100%;
+    
+    box-shadow: 2px 3px 5px #dbdbdb, -2px 3px 5px #dbdbdb;
+}
+
+/* Selectors for the "Top Performance" section start here. */
+
+.top-performance {
+    padding-left: 16px;
+
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.top-performance .content {
+    display: flex;
+}
+
+.top-performance .member {
+    display: flex;
+    gap: 16px;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bar {
+    width: 100px;
+    height: 10px;
+    background-color: pink;
+}
+
+/* Selectors for the left "Add" section start here. */
+
+.add.left {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* Selectors for the right "Add" section start here. */
+
+.add.right {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+/* Selectors for the "Stats" section start here. */
+
+.stats {
+    padding: 0 16px 16px 16px;
+
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stats .content {
+    padding: 32px 16px 16px 16px;
+    
+    background-color: white;
+    box-shadow: 2px 3px 5px #dbdbdb, -2px 3px 5px #dbdbdb;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+/* Selectors for the select element start here. */
+
+.stats select {
+    padding: 4px 8px;
+
+    background-color: #ffffff;
+    border-radius: 4px;
+
+    align-self: flex-start;
+}
+
+/* Selectors for the pie chart start here. */
+
+.stats .graph {
+    padding-bottom: 32px;
+
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.stats img[src$="svg"] {
+    width: 1rem;
+}
+
+.pie {
+    width: 225px;
+    height: 225px;
+
+    background-image: conic-gradient(
+        #F27281 70deg, 
+        #ABDFEB 0 235deg, 
+        #F7D88B 0
+    );
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    width: 112.5px;
+    height: 112.5px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Selectors for the legend of the pie chart start here. */
+
+.stats .legend {
+    width: 100%;
+
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.red,
+.blue,
+.yellow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legend .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.red .color {
+    width: 15px;
+    height: 15px;
+
+    background-color: #F27281;
+}
+
+.blue .color {
+    width: 15px;
+    height: 15px;
+
+    background-color: #ABDFEB;
+}
+
+.yellow .color {
+    width: 15px;
+    height: 15px;
+
+    background-color: #F7D88B;
+}
+
+.footer a {
+    font-size: 1rem;
+}
