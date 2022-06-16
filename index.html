@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
     </head>
@@ -126,40 +127,46 @@
                 </div>
 
                 <div class="links bottom">
-                    <li>
-                        <a href="">
-                            <img
-                                src="img/cog.svg"
-                                alt="Gear icon"
-                            >
-                            Settings
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img
-                                src="img/help-circle.svg"
-                                alt="Question mark icon"
-                            >
-                            Support
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img
-                                src="img/shield-check.svg"
-                                alt="Shield check icon"
-                            >
-                            Privacy
-                        </a>
-                    </li>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img
+                                    src="img/cog.svg"
+                                    alt="Gear icon"
+                                >
+                                Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img
+                                    src="img/help-circle.svg"
+                                    alt="Question mark icon"
+                                >
+                                Support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img
+                                    src="img/shield-check.svg"
+                                    alt="Shield check icon"
+                                >
+                                Privacy
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="logout">
-                    <a href="">
-                        <img src="img/logout.svg" alt="Logout icon">
-                        Logout
-                    </a>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/logout.svg" alt="Logout icon">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -291,111 +298,132 @@
                     </div>
                 </div>
 
-                <div class="data">
-                    <h3>Data</h3>
-
-                    <div class="graph">
-                        <img
-                            src="img/line-graph.svg"
-                            alt="Line graph of total monthly conversions"
-                        >
-                    </div>
-                </div>
-
-                <div class="top-performance">
-                    <h3>Top Performance</h3>
-
-                    <div class="members">
-                        <div class="member">
-                            <img src="img/whale.png" alt="Vector whale">
-                            <p>Megan<br>Add blog</p>
-                        </div>
-                        
-                        <div class="member">
-                            <img src="img/penguin.png" alt="Vector penguin">
-                            <p>John<br>Develop app</p>
-                        </div>
-                        
-                        <div class="member">
-                            <img src="img/frog.png" alt="Vector frog">
-                            <p>Alex<br>Website redesign</p>
-                        </div>
-                    </div>
-
-                    <div class="progress-bars">
-                        <div class="progress">
-                            <p>62%</p>
-                            <div class="bar"></div>
-                            <div class="percentage"></div>
-                        </div>
-
-                        <div class="progress">
-                            <p>11%</p>
-                            <div class="bar"></div>
-                            <div class="percentage"></div>
-                        </div>
-
-                        <div class="progress">
-                            <p>43%</p>
-                            <div class="bar"></div>
-                            <div class="percentage"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="add">
-                    <img src="img/plus-circle.svg" alt="Add icon">
-                    <p>Add<br>Goal</p>
-                </div>
-
-                <div class="add">
-                    <img src="img/plus-circle.svg" alt="Add icon">
-                    <p>Add<br>Task</p>
-                </div>
-
-                <div class="stats">
-                    <h3>Stats</h3>
-
-                    <div class="content">
-                        <select name="kpi" id="kpi">
-                            <option value="traffic">
-                                Organic Traffic & Leads
-                            </option>
-                            <option value="revenue">
-                                Total Revenue
-                            </option>
-                            <option value="customers">
-                                New Customers
-                            </option>
-                        </select>
+                <div class="grid-container">
+                    <div class="data">
+                        <h3>Data</h3>
 
                         <div class="graph">
-                            <div class="pie">
-                                <div class="center">
-                                    <img
-                                        src="img/arrow-up.svg"
-                                        alt="Up arrow icon"
-                                    >
-                                    <p>75%</p>
+                            <img
+                                src="img/line-graph.svg"
+                                alt="Line graph of total monthly conversions"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="top-performance">
+                        <h3>Top Performance</h3>
+
+                        <div class="content">
+                            <div class="members">
+                                <div class="member">
+                                    <img src="img/whale.png" alt="Vector whale">
+                                    <p>Megan<br>Add blog</p>
+                                </div>
+                                
+                                <div class="member">
+                                    <img src="img/penguin.png" alt="Vector penguin">
+                                    <p>John<br>Develop app</p>
+                                </div>
+                                
+                                <div class="member">
+                                    <img src="img/frog.png" alt="Vector frog">
+                                    <p>Alex<br>Website redesign</p>
+                                </div>
+                            </div>
+
+                            <div class="progress-bars">
+                                <div class="progress">
+                                    <p>62%</p>
+                                    <div class="bar"></div>
+                                    <div class="percentage"></div>
+                                </div>
+
+                                <div class="progress">
+                                    <p>11%</p>
+                                    <div class="bar"></div>
+                                    <div class="percentage"></div>
+                                </div>
+
+                                <div class="progress">
+                                    <p>43%</p>
+                                    <div class="bar"></div>
+                                    <div class="percentage"></div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="legend">
-                            <ul>
-                                <li>
-                                    <p>65%</p>
-                                    <p>Instagram</p>
-                                </li>
-                                <li>
-                                    <p>12%</p>
-                                    <p>Facebook</p>
-                                </li>
-                                <li>
-                                    <p>24%</p>
-                                    <p>Online Search</p>
-                                </li>
-                            </ul>
+                    <div class="add left">
+                        <img src="img/plus-circle.svg" alt="Add icon">
+                        <p>Add<br>Goal</p>
+                    </div>
+
+                    <div class="add right">
+                        <img src="img/plus-circle.svg" alt="Add icon">
+                        <p>Add<br>Task</p>
+                    </div>
+
+                    <div class="stats">
+                        <h3>Stats</h3>
+
+                        <div class="content">
+                            <select name="kpi" id="kpi">
+                                <option value="traffic">
+                                    Organic Traffic
+                                </option>
+                                <option value="revenue">
+                                    Total Revenue
+                                </option>
+                                <option value="customers">
+                                    New Customers
+                                </option>
+                            </select>
+
+                            <div class="graph">
+                                <div class="pie">
+                                    <div class="center">
+                                        <img
+                                            src="img/arrow-up.svg"
+                                            alt="Up arrow icon"
+                                        >
+                                        <p>75%</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="legend">
+                                <div class="red">
+                                    <div class="title">
+                                        <div class="color"></div>
+                                        <p>Instagram</p>
+                                    </div>
+                                    <p>19%</p>
+                                </div>
+
+                                <div class="blue">
+                                    <div class="title">
+                                        <div class="color"></div>
+                                        <p>Facebook</p>
+                                    </div>
+                                    <p>47%</p>
+                                </div>
+                                
+                                <div class="yellow">
+                                    <div class="title">
+                                        <div class="color"></div>
+                                        <p>Online Search</p>
+                                    </div>
+                                    <p>34%</p>
+                                </div>
+                            </div>
+
+                            <div class="footer">
+                                <a
+                                    href="https://github.com/hannahkim313">
+                                    <i class='fa fa-github'></i>
+                                    Hannah Kim
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
