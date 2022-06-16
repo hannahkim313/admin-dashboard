@@ -1,27 +1,16 @@
-/* 
-Color reference:
+:root {
+    --progress-bar: calc(100vw / 12);
 
-    Pink
-    #F27281
-
-    Blue
-    #ABDFEB
-
-    Yellow
-    #F7D88B
-
-    Orange
-    #E6BD80
-
-    Brown
-    #BF937D
-
-    White
-    #EAEBEB
-
-    Black
-    #454C59
-*/
+    --red: #F27281;
+    --yellow: #F7D88B;
+    --blue: #ABDFEB;
+    --green: #7BD092;
+    --main-bg-color: #f6f6f6;
+    --main-bg-color-dark: #f1f1f1;
+    --border-color: #d3d3d3;
+    
+    --box-shadow: 2px 3px 5px #dbdbdb, -2px 3px 5px #dbdbdb;
+}
 
 a {
     font-size: 1.1rem;
@@ -90,7 +79,7 @@ img[src*="leaf"] {
     top: 0;
 
     background-color: white;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid var(--border-color);
 
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -140,7 +129,7 @@ img[src*="leaf"] {
 .header .right input {
     padding-left: 8px;
     
-    background-color: #f1f1f1;
+    background-color: var(--main-bg-color-dark);
     border: none;
     border-radius: 32px;
 }
@@ -158,7 +147,7 @@ img[src*="leaf"] {
     left: 0;
 
     background-color: white;
-    border-right: 1px solid #d3d3d3;
+    border-right: 1px solid var(--border-color);
 
     grid-column: 1 / 2;
     grid-row: 1 / 3;
@@ -179,13 +168,13 @@ img[src*="leaf"] {
 .links.top {
     padding: 16px 0 16px 0;
 
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .links.bottom {
     padding: 16px 0 16px 0;
 
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .links li,
@@ -204,7 +193,7 @@ img[src*="leaf"] {
 
 .sidebar li:hover,
 .logout li:hover {
-    background-color: #f1f1f1;
+    background-color: var(--main-bg-color-dark);
 }
 
 .logout {
@@ -216,7 +205,7 @@ img[src*="leaf"] {
 /* ========================================================================== */
 
 .main {
-    background-color: #f6f6f6;
+    background-color: var(--main-bg-color);
 
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -227,7 +216,7 @@ img[src*="leaf"] {
 .heading {
     padding: 16px;
 
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid var(--border-color);
 
     display: flex;
     justify-content: space-between;
@@ -265,14 +254,19 @@ img[src*="leaf"] {
     background-color: #ffffff;
     border: none;
     border-radius: 12px;
-    box-shadow: 2px 2px 5px #dbdbdb, -2px 2px 5px #dbdbdb;
+    box-shadow: var(--box-shadow);
 
     display: flex;
+    align-items: center;
     gap: 4px;
 }
 
 .heading button:hover {
-    background-color: #dbdbdb;
+    background-color: var(--main-bg-color-dark);
+}
+
+.heading img[src$="svg"] {
+    width: 1rem;
 }
 
 /* Selectors for the "Your Projects" section start here. */
@@ -294,9 +288,9 @@ img[src*="leaf"] {
     padding: 16px;
 
     background-color: white;
-    border-left: 8px solid #F7D88B;
+    border-left: 8px solid var(--yellow);
     border-radius: 12px;
-    box-shadow: 2px 3px 5px #dbdbdb, -2px 3px 5px #dbdbdb;
+    box-shadow: var(--box-shadow);
 
     display: flex;
     flex-direction: column;
@@ -340,13 +334,13 @@ img[src*="leaf"] {
 .data .graph {
     width: 100%;
     
-    box-shadow: 2px 3px 5px #dbdbdb, -2px 3px 5px #dbdbdb;
+    box-shadow: var(--box-shadow);
 }
 
 /* Selectors for the "Top Performance" section start here. */
 
 .top-performance {
-    padding-left: 16px;
+    padding: 16px;
 
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -357,24 +351,72 @@ img[src*="leaf"] {
 }
 
 .top-performance .content {
+    padding: 16px;
+
+    background-color: white;
+    box-shadow: var(--box-shadow);
+
     display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .top-performance .member {
     display: flex;
-    gap: 16px;
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.member .title,
+.member > p {
+    flex: 1;
+}
+
+.member .title > p:last-child {
+    font-size: 0.9rem;
 }
 
 .progress {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
 }
 
 .bar {
-    width: 100px;
+    width: var(--progress-bar);
     height: 10px;
-    background-color: pink;
+
+    position: relative;
+
+    background-color: var(--main-bg-color-dark);
+    border-radius: 12px;
+}
+
+.percentage {
+    height: 10px;
+
+    position: absolute;
+
+    border-radius: 12px;
+}
+
+.member.one .percentage {
+    width: calc(var(--progress-bar) / 10 * 6.2);
+
+    background-color: var(--yellow);
+}
+
+.member.two .percentage {
+    width: calc(var(--progress-bar) / 10 * 4.3);
+    
+    background-color: var(--red);
+}
+
+.member.three .percentage {
+    width: calc(var(--progress-bar) / 10 * 8.1);
+
+    background-color: var(--green);
 }
 
 /* Selectors for the left "Add" section start here. */
@@ -408,7 +450,7 @@ img[src*="leaf"] {
     padding: 32px 16px 16px 16px;
     
     background-color: white;
-    box-shadow: 2px 3px 5px #dbdbdb, -2px 3px 5px #dbdbdb;
+    box-shadow: var(--box-shadow);
     
     display: flex;
     flex-direction: column;
@@ -434,7 +476,7 @@ img[src*="leaf"] {
 .stats .graph {
     padding-bottom: 32px;
 
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .stats img[src$="svg"] {
@@ -446,9 +488,9 @@ img[src*="leaf"] {
     height: 225px;
 
     background-image: conic-gradient(
-        #F27281 70deg, 
-        #ABDFEB 0 235deg, 
-        #F7D88B 0
+        var(--red) 70deg, 
+        var(--blue) 0 235deg, 
+        var(--yellow) 0
     );
     border-radius: 50%;
 
@@ -500,22 +542,24 @@ img[src*="leaf"] {
     width: 15px;
     height: 15px;
 
-    background-color: #F27281;
+    background-color: var(--red);
 }
 
 .blue .color {
     width: 15px;
     height: 15px;
 
-    background-color: #ABDFEB;
+    background-color: var(--blue);
 }
 
 .yellow .color {
     width: 15px;
     height: 15px;
 
-    background-color: #F7D88B;
+    background-color: var(--yellow);
 }
+
+/* Selectors for the footer start here. */
 
 .footer a {
     font-size: 1rem;
