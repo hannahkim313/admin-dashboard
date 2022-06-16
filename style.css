@@ -12,6 +12,10 @@
     --box-shadow: 2px 3px 5px #dbdbdb, -2px 3px 5px #dbdbdb;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 a {
     font-size: 1.1rem;
     color: black;
@@ -26,7 +30,8 @@ button {
     padding: 4px 8px;
 }
 
-button:hover {
+button:hover,
+select:hover {
     cursor: pointer;
 }
 
@@ -42,26 +47,6 @@ img[src*="leaf"] {
     width: 45px;
 }
 
-.bird, .chicken, .bee, .bear {
-    border-radius: 50%;
-}
-
-.bird {
-    background-color: #f1d6df;
-}
-
-.chicken {
-    background-color: #eac8bc;
-}
-
-.bee {
-    background-color: #f0e8d1;
-}
-
-.bear {
-    background-color: #f6e9da;
-}
-
 .container {
     display: grid;
     grid-template-columns: 1fr 3.5fr;
@@ -73,7 +58,7 @@ img[src*="leaf"] {
 /* ========================================================================== */
 
 .header {
-    padding: 8px 0;
+    padding: 16px 0;
 
     position: sticky;
     top: 0;
@@ -89,8 +74,18 @@ img[src*="leaf"] {
     align-items: center;
 }
 
+.bird, .chicken, .bee, .bear {
+    border-radius: 50%;
+}
+
 .header img[src$="png"] {
+    width: 55px;
+
     padding: 12px;
+}
+
+.header img[src$="svg"] {
+    width: 1.3rem;
 }
 
 /* Selectors for the left side of the header start here. */
@@ -104,8 +99,29 @@ img[src*="leaf"] {
     gap: 8px;
 }
 
+.bird {
+    background-color: #f1d6df;
+}
+
+.chicken {
+    background-color: #eac8bc;
+}
+
+.bee {
+    background-color: #f0e8d1;
+}
+
 .header .left img[src$="svg"] {
-    width: 35px;
+    width: 2rem;
+}
+
+.header .left a {
+    border: 1px solid transparent;
+}
+
+.header .left a:hover {
+    border: 1px solid #A17C75;
+    border-radius: 50%;
 }
 
 /* Selectors for the right side of the header start here. */
@@ -124,6 +140,10 @@ img[src*="leaf"] {
 .header .profile {
     display: flex;
     gap: 8px;
+}
+
+.bear {
+    background-color: #f6e9da;
 }
 
 .header .right input {
@@ -157,7 +177,7 @@ img[src*="leaf"] {
     width: 1.2rem;
 }
 
-.sidebar .title {
+.sidebar .title a {
     padding: 16px 0 8px 16px;
 
     display: flex;
