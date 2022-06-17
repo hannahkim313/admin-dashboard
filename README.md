@@ -1,5 +1,7 @@
 # Admin Dashboard
 
+https://hannahkim313.github.io/admin-dashboard/
+
 ## Project Summary
 
 This project exercise, created by The Odin Project, is a full dashboard design
