@@ -318,6 +318,8 @@ img[src*="leaf"] {
 }
 
 .project .content {
+    color: #545454;
+    
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -401,6 +403,7 @@ img[src*="leaf"] {
 
 .member .title > p:last-child {
     font-size: 0.9rem;
+    color: #545454;
 }
 
 .progress {
