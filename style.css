@@ -57,19 +57,25 @@ img[src*="leaf"] {
 
 .header {
     padding: 16px 0;
-
+    
     position: sticky;
     top: 0;
-
+    
     background-color: white;
     border-bottom: 1px solid var(--border-color);
-
+    
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+}
 
+.default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.new {
+    display: none;
 }
 
 .bird, .chicken, .bee, .bear {
@@ -86,9 +92,9 @@ img[src*="leaf"] {
     width: 1.3rem;
 }
 
-/* Selectors for the left side of the header start here. */
+/* Selectors for the left side of the default header start here. */
 
-.header .left {
+.default .left {
     padding-left: 16px;
     
     display: flex;
@@ -109,22 +115,22 @@ img[src*="leaf"] {
     background-color: #f0e8d1;
 }
 
-.header .left img[src$="svg"] {
+.default .left img[src$="svg"] {
     width: 2rem;
 }
 
-.header .left a {
+.default .left a {
     border: 1px solid transparent;
 }
 
-.header .left a:hover {
+.default .left a:hover {
     border: 1px solid #A17C75;
     border-radius: 50%;
 }
 
-/* Selectors for the right side of the header start here. */
+/* Selectors for the right side of the default header start here. */
 
-.header .right {
+.default .right {
     padding-right: 16px;
     
     display: flex;
@@ -133,9 +139,9 @@ img[src*="leaf"] {
     gap: 16px;
 }
 
-.header .search,
-.header .alerts,
-.header .profile {
+.default .search,
+.default .alerts,
+.default .profile {
     display: flex;
     gap: 8px;
 }
@@ -144,7 +150,7 @@ img[src*="leaf"] {
     background-color: #f6e9da;
 }
 
-.header .right input {
+.default .right input {
     padding-left: 8px;
     
     background-color: var(--main-bg-color-dark);
@@ -246,8 +252,6 @@ img[src*="leaf"] {
 .heading .left {
     font-size: 1.5rem;
 
-    padding-left: 16px;
-
     display: flex;
     align-items: center;
     gap: 16px;
@@ -260,8 +264,6 @@ img[src*="leaf"] {
 /* Selectors for the right side of the heading start here. */
 
 .heading .right {
-    padding-right: 16px;
-
     display: flex;
     gap: 16px;
 }
@@ -273,14 +275,17 @@ img[src*="leaf"] {
     border: none;
     border-radius: 12px;
     box-shadow: var(--box-shadow);
-
-    display: flex;
-    align-items: center;
-    gap: 4px;
 }
 
 .heading button:hover {
     background-color: var(--main-bg-color-dark);
+}
+
+.heading button .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
 
 .heading img[src$="svg"] {
@@ -330,7 +335,7 @@ img[src*="leaf"] {
     gap: 8px;
 }
 
-/* Selectors for the content after the "Your Projects" section start here. */
+/* Selectors for the content below the "Your Projects" section start here. */
 
 .grid-container {
     display: grid;
@@ -515,8 +520,6 @@ img[src*="leaf"] {
     flex: 1;
 }
 
-/* Selectors for the select element start here. */
-
 .stats select {
     padding: 4px 8px;
 
@@ -625,6 +628,9 @@ img[src*="leaf"] {
 /* ========================================================================== */
 
 @media only screen and (max-width: 1150px) {
+    
+    /* Selectors for the sections of the main content start here. */
+
     .grid-container {
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(3, auto);
@@ -660,6 +666,57 @@ img[src*="leaf"] {
     .add.right {
         grid-column: 2 / 3;
         grid-row: 4 / 5;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+
+    /* Selectors for the header start here. */
+
+    .header .default {
+        display: none;
+    }
+
+    .new {
+        padding: 0 16px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .new img[src$="svg"] {
+        width: 2rem;
+    }
+
+    .new .title a {
+        display: flex;
+        align-items: center;
+    }
+
+    .heading .right {
+        padding-bottom: 8px;
+    }
+    
+    /* Selectors for the sidebar start here. */
+    
+    .sidebar {
+        display: none;
+    }
+    
+    /* Selectors for the sections of the main content start here. */
+
+    .heading {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .projects {
+        flex-wrap: wrap;
     }
 }
 

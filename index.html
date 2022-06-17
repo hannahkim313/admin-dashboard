@@ -12,49 +12,62 @@
     <body>
         <div class="container">
             <div class="header">
-                <div class="left">
-                    <img src="img/plus-circle.svg" alt="Plus icon">
-
-                    <a href="">
-                        <div class="bird">
-                            <img src="img/bird.png" alt="Vector bird">
+                <!-- Default header when page is at original size -->
+                <div class="default">
+                    <div class="left">
+                        <img src="img/plus-circle.svg" alt="Plus icon">
+                        <a href="">
+                            <div class="bird">
+                                <img src="img/bird.png" alt="Vector bird">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="chicken">
+                                <img src="img/chicken.png" alt="Vector chicken">
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="bee">
+                                <img src="img/bee.png" alt="Vector bee">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <div class="search">
+                            <img src="img/magnify.svg" alt="Magnifying glass icon">
+                            <form action="" method="get">
+                                <label for="searchBar"></label>
+                                <input
+                                    type="text"
+                                    placeholder="Search"
+                                    id="searchBar"
+                                >
+                            </form>
                         </div>
-                    </a>
-                    <a href="">
-                        <div class="chicken">
-                            <img src="img/chicken.png" alt="Vector chicken">
+                        <div class="alerts">
+                            <img src="img/message-badge.svg" alt="Messages alert icon">
+                            <img src="img/bell-badge.svg" alt="Bell alert icon">
                         </div>
-                    </a>
-                    <a href="">
-                        <div class="bee">
-                            <img src="img/bee.png" alt="Vector bee">
+                        <div class="profile">
+                            <div class="bear">
+                                <img src="img/bear.png" alt="Vector bear">
+                            </div>
+                            <img src="img/chevron-down.svg" alt="Down caret">
                         </div>
-                    </a>
+                    </div>
                 </div>
 
-                <div class="right">
-                    <div class="search">
-                        <img src="img/magnify.svg" alt="Magnifying glass icon">
-                        <form action="" method="get">
-                            <label for="searchBar"></label>
-                            <input
-                                type="text"
-                                placeholder="Search"
-                                id="searchBar"
-                            >
-                        </form>
+                <!-- New header when page is resized -->
+                <div class="new">
+                    <img src="img/view-headline.svg" alt="Headline icon">
+                    <div class="title">
+                        <a href="">
+                            <img src="img/leaf.png" alt="Vector leaf">
+                            <h1>Uproot</h1>
+                        </a>
                     </div>
-
-                    <div class="alerts">
-                        <img src="img/message-badge.svg" alt="Messages alert icon">
-                        <img src="img/bell-badge.svg" alt="Bell alert icon">
-                    </div>
-
-                    <div class="profile">
-                        <div class="bear">
-                            <img src="img/bear.png" alt="Vector bear">
-                        </div>
-                        <img src="img/chevron-down.svg" alt="Down caret">
+                    <div class="bear">
+                        <img src="img/bear.png" alt="Vector bear">
                     </div>
                 </div>
             </div>
@@ -188,16 +201,22 @@
 
                     <div class="right">
                         <button type="button">
-                            <img src="img/pencil.svg" alt="Pencil icon">
-                            Create
+                            <div class="content">
+                                <img src="img/pencil.svg" alt="Pencil icon">
+                                Create
+                            </div>
                         </button>
                         <button type="button">
-                            <img src="img/share.svg" alt="Share icon">
-                            Share
+                            <div class="content">
+                                <img src="img/share.svg" alt="Share icon">
+                                Share
+                            </div>
                         </button>
                         <button type="button">
-                            <img src="img/upload.svg" alt="Upload icon">
-                            Upload
+                            <div class="content">
+                                <img src="img/upload.svg" alt="Upload icon">
+                                Upload
+                            </div>
                         </button>
                     </div>
                 </div>
