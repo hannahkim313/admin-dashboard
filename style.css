@@ -628,7 +628,7 @@ img[src*="leaf"] {
 /* ========================================================================== */
 
 @media only screen and (max-width: 1150px) {
-    
+
     /* Selectors for the sections of the main content start here. */
 
     .grid-container {
@@ -653,17 +653,16 @@ img[src*="leaf"] {
         grid-row: 3 / 4;
     }
 
-    .add.left,
-    .add.right {
-        margin: 8px 16px 16px 16px;
-    }
-
     .add.left {
+        margin: 8px 8px 16px 16px;
+
         grid-column: 1 / 2;
         grid-row: 4 / 5;
     }
 
     .add.right {
+        margin: 8px 16px 16px 8px;
+
         grid-column: 2 / 3;
         grid-row: 4 / 5;
     }
