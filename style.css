@@ -662,3 +662,9 @@ img[src*="leaf"] {
         grid-row: 4 / 5;
     }
 }
+
+@media only screen and (max-height: 600px) {
+    .sidebar {
+        overflow: scroll;
+    }
+}
